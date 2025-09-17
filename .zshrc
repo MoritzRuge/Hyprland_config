@@ -104,3 +104,15 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
  # --- Source --- #
   source ~/.zsh/alias.conf
+
+# --- History --- #
+HISTSIZE=5000
+HISTFILE=~/.zsh/zsh_history
+
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
