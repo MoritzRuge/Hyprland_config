@@ -109,10 +109,17 @@ source $ZSH/oh-my-zsh.sh
 HISTSIZE=5000
 HISTFILE=~/.zsh/zsh_history
 
-setopt appendhistory
+# --- Options --- #
+setopt append_history inc_append_history share_history
 setopt sharehistory
 setopt hist_ignore_space
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
+setopt dot_glob
+setopt extended_glob
+unsetopt prompt_sp # don't autoclean blanklines
+
+# --- Path --- # 
+export PATH="$HOME/.config/scrips:$PATH"
