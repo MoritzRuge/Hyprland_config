@@ -8,17 +8,15 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/mode",
-        "hyprland/scratchpad",
-        "custom/media"
+	"custom/pacman"
     ],
     "modules-center": [
         "hyprland/window"
     ],
     "modules-right": [
         "mpd",
-        "idle_inhibitor",
         "pulseaudio",
+	"bluetooth",
         "network",
         "power-profiles-daemon",
         "cpu",
@@ -33,23 +31,6 @@
         "tray",
         "custom/power"
     ],
-    // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -58,16 +39,6 @@
             "locked": "",
             "unlocked": ""
         }
-    },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": false,
-        "format-icons": ["", ""],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
@@ -95,13 +66,15 @@
         "tooltip-format": "MPD (connected)",
         "tooltip-format-disconnected": "MPD (disconnected)"
     },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
+
+	"bluetooth":{
+		"format": "{status}",
+		"format-disabled": "", //if disab. empty
+		"format-connected": "{device_alias} connected",
+		"format-connected-battey": "{device_alias} {device_battery_percentage}%",
+		"on-click": "kitty 'bluetui'"
+	},
+
     "tray": {
         // "icon-size": 21,
         "spacing": 10,
@@ -137,7 +110,7 @@
     },
     "battery": {
         "states": {
-            // "good": 95,
+            "good": 95,
             "warning": 30,
             "critical": 15
         },
@@ -216,5 +189,14 @@
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
 		}
+    },
+    
+    "custom/pacman": {
+	"format": "[Pacman: {}]",
+	"interval": 3600,
+	"exec": "checkupdates | wc -l",
+	"on-click": "update-system",
+	//"signal": 8,
+	"tooltip-format": "{} updates available"
     }
 }
