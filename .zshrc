@@ -123,3 +123,6 @@ unsetopt prompt_sp # don't autoclean blanklines
 
 # --- Path --- # 
 export PATH="$HOME/.config/scrips:$PATH"
+
+# --- Test --- #
+fastfetch
