@@ -122,7 +122,7 @@ setopt extended_glob
 unsetopt prompt_sp # don't autoclean blanklines
 
 # --- Path --- # 
-export PATH="$HOME/.config/scrips:$PATH"
+export PATH="$HOME/.config/scripts:$PATH"
 
 # --- Test --- #
 fastfetch
