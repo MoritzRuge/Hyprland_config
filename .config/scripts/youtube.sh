@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-output_path="$HOME/Downloads/"
+output_path="$HOME/Downloads/.temp_videos/"
 
 if [ -z "$1" ]; then
   echo "Input Youtube link: "
@@ -24,6 +24,6 @@ else
   echo "Video heruntergeladen: $filename"
   mpv "$filename"
 
-  echo "Deleting file: '$filename'"
-  rm -v "$filename"
+  #echo "Deleting file: '$filename'"
+  #rm -v "$filename"
 fi
