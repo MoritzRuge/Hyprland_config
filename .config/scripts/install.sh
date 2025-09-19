@@ -2,40 +2,42 @@
 
 # --- TODO --- #
 # - Wenn AUR existiert, sollte er den install von yay skippen
-# - Lazyvim 
+# - git first initialisation git config --global user.name / user.email
 
 # --- Variablen --- #
 path_aur=$HOME/.yay/
 path_oh_my_zsh=$HOME/.oh-my-zsh
+timer=3
 
-
-# Synch mirrors
+# --- Synch mirrors --- #
 echo "Updating Mirrors"
-sudo pacman -Syu
-sleep 3
+sudo pacman -Sy
+sleep "$timer"
 
-echo "Installing packet list"
+echo "Installing Pacman packet list..."
 xargs -a "$HOME/.config/scripts/pakete.txt" sudo pacman -S --needed
 echo "Finished installing packets"
-sleep 3
+sleep "$timer"
 
-# Install Yay AUR
+
+# --- Install Yay AUR --- #
+
 if pacman -Q yay &>/dev/null; then
   echo "YAY is installed"
 
   if [ -d "$path_aur" ]; then
     # path exists - cd directory and pull new version
     echo "AUR/YAY exists!... Building new Version!"
-    sleep 3
+    sleep "$timer"
 
     cd "$path_aur" || exit 1
     git pull
     makepkg -si
     echo "Finished installation for Yay"
-    sleep 3
+    sleep "$timer"
   else
     echo "YAY is installed, but path does not exist. Skipping update."
-    sleep 3
+    sleep "$timer"
   fi
 
 else
@@ -51,18 +53,26 @@ else
   echo "Finished installing YAY"
 fi
 
+
+# --- Oh-My-Zsh installation --- #
+
 if [ -d "$path_oh_my_zsh" ]; then
 	echo "Oh-My-Zsh exists, running update!"
-	sleep 3
+	sleep "$timer"
 	$ZSH/tools/upgrade.sh
 else
 	echo "Path not found, installing form github!"
-	sleep 1
+	sleep "$timer"
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 	echo ""
 	echo "Oh-My-Zsh installation finished!"
-	sleep 3
+	sleep "$timer"
 fi
+
+
+# --- switch to zsh shell --- #
+zsh
+
 
 echo "Install.sh script finished."
 	
