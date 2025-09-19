@@ -19,7 +19,6 @@ xargs -a "$HOME/.config/scripts/pakete.txt" sudo pacman -S --needed
 echo "Finished installing packets"
 sleep "$timer"
 
-
 # --- Install Yay AUR --- #
 
 if pacman -Q yay &>/dev/null; then
@@ -53,26 +52,25 @@ else
   echo "Finished installing YAY"
 fi
 
-
 # --- Oh-My-Zsh installation --- #
 
 if [ -d "$path_oh_my_zsh" ]; then
-	echo "Oh-My-Zsh exists, running update!"
-	sleep "$timer"
-	$ZSH/tools/upgrade.sh
+  echo "Oh-My-Zsh exists, running update!"
+  sleep "$timer"
+  $ZSH/tools/upgrade.sh
 else
-	echo "Path not found, installing form github!"
-	sleep "$timer"
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-	echo ""
-	echo "Oh-My-Zsh installation finished!"
-	sleep "$timer"
+  echo "Path not found, installing form github!"
+  sleep "$timer"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+  git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
+  echo ""
+  echo "Oh-My-Zsh installation finished!"
+  sleep "$timer"
 fi
-
 
 # --- switch to zsh shell --- #
 zsh
 
-
 echo "Install.sh script finished."
-	
