@@ -14,10 +14,25 @@ echo "Updating Mirrors"
 sudo pacman -Sy
 sleep "$timer"
 
+# --- Installing default pakages --- #
 echo "Installing Pacman packet list..."
 xargs -a "$HOME/.config/scripts/pakete.txt" sudo pacman -S --needed
 echo "Finished installing packets"
 sleep "$timer"
+
+# --- enable system services --- #
+echo "Enabling systemservices..."
+sleep 0.5
+sudo systemctl enable ly
+echo "Systemservices enabled."
+sleep 0.5
+
+# --- enable user services --- #
+echo "Enabeling user services..."
+sleep 0.5
+systemctl --user enable mpd
+echo "Userservices enabled."
+sleep 0.5
 
 # --- Install Yay AUR --- #
 
