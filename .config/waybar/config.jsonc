@@ -70,6 +70,7 @@
 	"bluetooth":{
 		"format": "{status}",
 		"format-disabled": "", //if disab. empty
+    "format-no-controller": "",
 		"format-connected": "{device_alias} connected",
 		"format-connected-battey": "{device_alias} {device_battery_percentage}%",
 		"on-click": "kitty 'bluetui'"
@@ -140,12 +141,12 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
+        "format-ethernet": "[   {bandwidthDownBytes} |   {bandwidthUpBytes} 󰛳  ]",
+        "tooltip-format": "{ifname} via {gwaddr} 󰛳",
+        "format-linked": "{ifname} (No IP) 󰛳",
         "format-disconnected": "Disconnected ⚠",
-        //"format-alt": "{ifname}: {ipaddr}/{cidr}",
-	"on-click": "kitty 'impala'"
+	      "on-click": "kitty 'impala'",
+        "tooltip-format-ethernet": "{ipaddr}/{cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -192,10 +193,10 @@
     },
     
     "custom/pacman": {
-	"format": "[Pacman: {}]",
+	"format": "[ 󰏔  {} ]",
 	"interval": 3600,
 	"exec": "checkupdates | wc -l",
-	"on-click": "update-system",
+	"on-click": "kitty 'update-system.sh'",
 	//"signal": 8,
 	"tooltip-format": "{} updates available"
     }
