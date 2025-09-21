@@ -31,7 +31,7 @@ if pacman -Q yay &>/dev/null; then
 
     cd "$path_aur" || exit 1
     git pull
-    makepkg -si
+    pacman -U
     echo "Finished installation for Yay"
     sleep "$timer"
   else
