@@ -58,21 +58,20 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "[ cpu: {usage}% ]",
         "interval": 3,
         "tooltip": false,
         "on-click": "kitty btop"
     },
     "memory": {
-        "format": "{}% "
+        "format": "[ mem: {}% ]"
     },
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format": "[ temp: {temperatureC}°C ]"
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -115,6 +114,7 @@
         "tooltip-format": "{ifname} via {gwaddr} 󰛳",
         "format-linked": "{ifname} (No IP) 󰛳",
         "format-disconnected": "Disconnected ⚠",
+        "interval": 1,
 	      "on-click": "kitty 'impala'",
         "tooltip-format-ethernet": "{ipaddr}/{cidr}"
     },

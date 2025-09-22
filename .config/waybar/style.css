@@ -1,37 +1,51 @@
+@import "../../.cache/wal/colors-waybar.css";
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto;
-    font-size: 13px;
+    font-size: 15px;
 }
-
-window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+window#waybar,
+window#waybar.empty,
+window#waybar.empty #window {
+    background-color: transparent;
+   /* border-bottom: 3px solid @color5;*/
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
 }
 
-window#waybar.hidden {
-    opacity: 0.2;
+/* Modules center */ 
+.modules-center {
+    background-color: @color5;
+    color: @color2;
+    border: 2px solid @background;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
-window#waybar.termite {
-    background-color: #3F3F3F;
+/* modules left */
+.modules-left {
+    background-color: @color5;
+    color: @color2;
+    border: 2px solid @background;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 3px;
 }
 
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
+/* modules left */
+.modules-right {
+    background-color: @color5;
+    color: @color2;
+    border: 2px solid @background;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 button {
@@ -54,18 +68,23 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
-    color: #ffffff;
+    color: @background;
+    padding: 0px;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    color: @color4;
+    border-radius: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 #workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+    color: @color4;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 #workspaces button.urgent {
@@ -174,7 +193,7 @@ label:focus {
 }
 
 #memory {
-    background-color: #9b59b6;
+    background-color: @background;
 }
 
 #disk {
