@@ -85,6 +85,22 @@ else
   sleep "$timer"
 fi
 
+# --- dolphine xdg menu fix --- #
+if pacman -Q dolphine $ >/dev/null; then
+  echo "Dolphine found... installing fix!"
+  sudo pacman -Sy archlinux-xdg-menu
+  sudo update-desktop-database
+
+  if ouput=$(ls /etc/xdg/menus/) -eq "arch-applications.menu"; then
+    echo "Dolphine fix in order."
+  else
+    sudo mv "$output" "applications.menu"
+    echo "Fix applied!"
+  fi
+else
+  echo "Dolpine not installed! Skipping..."
+fi
+
 # --- switch to zsh shell --- #
 zsh
 
