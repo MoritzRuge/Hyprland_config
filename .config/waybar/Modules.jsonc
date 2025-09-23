@@ -1,13 +1,23 @@
 {
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
+    }
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "tooltip": "true",
+    "tooltip-format-activated": "Idle_inhibitor active",
+    "tooltip-format-deactivated": "Idle_inhibitor not active",
+    "format-icons": {
+      "activated": "",
+      "deactivated": "",
+    }
+  },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
         "format-disconnected": "Disconnected ",
