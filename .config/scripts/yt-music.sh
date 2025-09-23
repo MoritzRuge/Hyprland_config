@@ -16,7 +16,8 @@ fi
 
 yt-dlp \
   -x --audio-format mp3 \
+  --audio-quality 0 \
+  --embed-thumbnail \
   --add-metadata \
   --metadata-from-title "%(artist)s - %(title)s" \
-  --parse-metadata "artist:$artist" \
   "$yt_link"
