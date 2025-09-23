@@ -12,6 +12,9 @@ while true; do
     echo "Upgrading the system!"
     sleep 0.5
     sudo pacman -Syu --noconfirm
+    sleep 0.5
+
+    yay -Syu
     echo "Completed the system upgrade!"
     sleep 1
     exit 0
