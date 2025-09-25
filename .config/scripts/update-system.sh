@@ -3,6 +3,7 @@
 # Script to update the system
 
 checkupdates
+yay -Qu
 sleep 1
 
 while true; do

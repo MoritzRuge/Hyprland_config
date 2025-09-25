@@ -171,14 +171,15 @@
 			"hibernate": "systemctl hibernate"
 		}
     },
-    
+    // Updates
     "custom/pacman": {
-	"format": "[ 󰏔  {} ]",
-	"interval": 3600,
-	"exec": "checkupdates | wc -l",
-	"on-click": "kitty 'update-system.sh'",
-	//"signal": 8,
-	"tooltip-format": "{} updates available"
+	    "format": "[ 󰏔  {} ]",
+      "tooltip_format": "{}",
+	    "interval": 300,
+      "return-type": "json",
+	    "exec": "~/.config/scripts/updates.sh",
+	    "on-click": "kitty 'update-system.sh'",
+      "tooltip": true
     },
 
   // arch icon
