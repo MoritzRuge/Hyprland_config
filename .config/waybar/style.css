@@ -48,6 +48,32 @@ window#waybar.empty #window {
     padding-right: 0px;
 }
 
+/* ----------------------------------------------------------------- 
+ * Custom Updates Pacman
+ * ----------------------------------------------------------------- */ 
+
+#custom-pacman {
+  background-color: @background;
+  color: @color15;
+  border-radius: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+#custom-pacman.green {
+  background-color: @background;
+  color: @color15;
+}
+#custom-pacman.yellow {
+  background-color: #ff9a3c;
+  color: @color15;
+}
+#custom-pacman.red {
+  background-color: #dc2f2f;
+  color: @color15;
+}
+
+
 button {
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;

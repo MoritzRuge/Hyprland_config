@@ -23,7 +23,7 @@ css_class="green"
 
 if [ "$updates" -lt "$threshhold_yellow" ]; then
   css_class="green"
-elif [ "$updates" -lt "$threshhold_red"]; then
+elif [ "$updates" -lt "$threshhold_red" ]; then
   css_class="yellow"
 else
   css_class="red"
