@@ -1,0 +1,43 @@
+@import ".cache/wal/colors-waybar.css";
+
+* {
+  font-family: RobotoMonoNerdFont-Regular;
+  color: @foreground;
+  background: transparent;
+}
+
+#window {
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  background: @background;
+}
+
+#input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  border: 2px solid @color3;
+}
+
+#outer-box {
+  padding: 20px;
+  border: 2px solid @color3;
+}
+
+#img {
+  margin-right: 6px;
+}
+
+#entry {
+  padding: 10px;
+}
+
+#entry:selected {
+  border: 2px solid @color3;
+  background: @background;
+}
+
+#text {
+  margin: 2px;
+}

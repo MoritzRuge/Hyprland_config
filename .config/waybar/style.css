@@ -17,9 +17,9 @@ window#waybar.empty #window {
 
 /* Modules center */ 
 .modules-center {
-    background-color: @color16;
+    background-color: @background;
     color: @foreground;
-    border: 2px solid @background;
+    border: 2px solid @color3;
     padding-top: 0px;
     padding-bottom: 0px;
     padding-left: 0px;
@@ -28,9 +28,9 @@ window#waybar.empty #window {
 
 /* modules left */
 .modules-left {
-    background-color: @color16;
+    background-color: @background;
     color: @foreground;
-    border: 2px solid @background;
+    border: 2px solid @color3;
     padding-top: 0px;
     padding-bottom: 0px;
     padding-left: 0px;
@@ -39,9 +39,9 @@ window#waybar.empty #window {
 
 /* modules left */
 .modules-right {
-    background-color: @color16;
+    background-color: @background;
     color: @foreground;
-    border: 2px solid @background;
+    border: 2px solid @color3;
     padding-top: 0px;
     padding-bottom: 0px;
     padding-left: 0px;
