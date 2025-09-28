@@ -77,9 +77,10 @@
         "format": "[ mem: {}% ]"
     },
     "temperature": {
-        // "thermal-zone": 2,
+        //"thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
+        "warning-threshold": 10,
+        "critical-threshold": 30,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "[ temp: {temperatureC}°C ]"
     },
@@ -179,12 +180,15 @@
       "return-type": "json",
 	    "exec": "~/.config/scripts/updates.sh",
 	    "on-click": "kitty 'update-system.sh'",
-      "tooltip": true
+      "tooltip": true,
+      "class": "blink"
     },
 
   // arch icon
   "custom/arch": {
-	"format": " 󰣇 ",
+	"format": " 󰣇  {} ",
+  "exec": "pacman -Q linux | awk '/linux/ {print $2}'",
+  "interval": "once",
 	"tooltip-format": " █████╗ ██████╗  ██████╗██╗  ██╗    ██████╗ ████████╗██╗    ██╗
                       ██╔══██╗██╔══██╗██╔════╝██║  ██║    ██╔══██╗╚══██╔══╝██║    ██║
                       ███████║██████╔╝██║     ███████║    ██████╔╝   ██║   ██║ █╗ ██║

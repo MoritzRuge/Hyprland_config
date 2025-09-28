@@ -67,12 +67,43 @@ window#waybar.empty #window {
 #custom-pacman.yellow {
   background-color: #ff9a3c;
   color: @color15;
+  animation-name: blink;
+  animation-duration: 1.0s;
+  animation-timing-function: steps(12); 
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 #custom-pacman.red {
   background-color: #dc2f2f;
   color: @color15;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12); 
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
+
+/* ----------------------------------------------------------------- 
+ * Temperature settings
+ * ----------------------------------------------------------------- */ 
+#temperature.critical {
+  background-color: @background;
+  color: @color15;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#temperature {
+  background-color: @background;
+  color: @foreground;
+}
+#temperature.warning {
+  background-color: @background;
+  color: @color3;
+}
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */
@@ -127,7 +158,6 @@ button:hover {
 #cpu,
 #memory,
 #disk,
-#temperature,
 #backlight,
 #network,
 #pulseaudio,
@@ -170,8 +200,8 @@ button:hover {
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: @background;
+        color: @foreground;
     }
 }
 

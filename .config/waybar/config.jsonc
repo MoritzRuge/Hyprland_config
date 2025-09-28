@@ -11,13 +11,14 @@
   // "width": 1280, // Waybar width
   "spacing": 6, // Gaps between modules (4px)
   "fixed-center": true,
-  "margin-top": 4,
+  "margin-top": 0,
   "margin-bottom": -4,
   "margin-left": 10,
   "margin-right": 10,
   // Choose the order of the modules
   "modules-left": [
     "custom/arch",
+    "custom/arch_version",
     "idle_inhibitor",
     "tray",
 	  "custom/pacman"
