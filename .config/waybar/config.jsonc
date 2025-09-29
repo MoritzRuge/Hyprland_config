@@ -5,16 +5,16 @@
     "$HOME/.config/waybar/Modules.jsonc",
   ],
 
-  // "layer": "top", // Waybar at top layer
+  "layer": "top", // Waybar at top layer
   // "position": "bottom", // Waybar position (top|bottom|left|right)
   "height": 35, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
   "spacing": 6, // Gaps between modules (4px)
   "fixed-center": true,
   "margin-top": 0,
-  "margin-bottom": -4,
-  "margin-left": 10,
-  "margin-right": 10,
+  "margin-bottom": 0,
+  "margin-left": 0,
+  "margin-right": 0,
   // Choose the order of the modules
   "modules-left": [
     "custom/arch",
