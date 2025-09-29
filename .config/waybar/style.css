@@ -2,8 +2,8 @@
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto;
-    font-size: 15px;
+    font-family: "RobotoMono Nerd Font Mono";
+    font-size: 14px;
 }
 window#waybar,
 window#waybar.empty,
