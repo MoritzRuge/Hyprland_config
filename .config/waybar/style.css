@@ -2,7 +2,7 @@
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "RobotoMono Nerd Font Mono";
+    font-family:"Departure Mono","RobotoMono Nerd Font Mono", "FontAswesome";
     font-size: 14px;
 }
 window#waybar,

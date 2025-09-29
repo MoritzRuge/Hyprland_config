@@ -18,7 +18,6 @@
   // Choose the order of the modules
   "modules-left": [
     "custom/arch",
-    "custom/arch_version",
     "idle_inhibitor",
     "tray",
 	  "custom/pacman"
