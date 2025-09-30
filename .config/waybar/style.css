@@ -87,6 +87,10 @@ window#waybar.empty #window {
 /* ----------------------------------------------------------------- 
  * Temperature settings
  * ----------------------------------------------------------------- */ 
+#temperature {
+  background-color: @background;
+  color: @foreground;
+}
 #temperature.critical {
   background-color: @background;
   color: @color15;
@@ -95,10 +99,6 @@ window#waybar.empty #window {
   animation-timing-function: steps(12);
   animation-iteration-count: infinite;
   animation-direction: alternate;
-}
-#temperature {
-  background-color: @background;
-  color: @foreground;
 }
 #temperature.warning {
   background-color: @background;

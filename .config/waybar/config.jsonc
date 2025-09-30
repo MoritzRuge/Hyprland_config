@@ -12,7 +12,7 @@
   "spacing": 6, // Gaps between modules (4px)
   "fixed-center": true,
   "margin-top": 0,
-  "margin-bottom": 0,
+  "margin-bottom": -2,
   "margin-left": 0,
   "margin-right": 0,
   // Choose the order of the modules
