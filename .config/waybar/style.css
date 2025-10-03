@@ -89,7 +89,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------------------- */ 
 #temperature {
   background-color: @background;
-  color: @foreground;
+  color: @color15;
 }
 #temperature.critical {
   background-color: @background;
