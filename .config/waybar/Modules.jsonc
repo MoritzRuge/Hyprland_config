@@ -19,9 +19,9 @@
     }
   },
   "mpd": {
-    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) {volume}% ",
     "format-disconnected": "Disconnected ",
-    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+    "format-stopped": "",
     "unknown-tag": "N/A",
     "interval": 5,
     "consume-icons": {
@@ -100,7 +100,7 @@
   "battery": {
     "states": {
       "good": 95,
-      "warning": 30,
+      "warning": 35,
       "critical": 15
     },
     "format": "{capacity}% {icon}",
@@ -153,18 +153,13 @@
     "format-source-muted": "",
     "format-icons": {
       "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
       "default": [
         "",
         "",
         ""
       ]
     },
-    "on-click": "pavucontrol"
+    "on-click": "kitty wiremix"
   },
   "custom/media": {
     "format": "{icon} {text}",

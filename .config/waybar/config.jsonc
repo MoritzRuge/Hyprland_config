@@ -1,15 +1,13 @@
-/* My waybar config */ 
-
+/* My waybar config */
 {
   "include": [
-    "$HOME/.config/waybar/Modules.jsonc",
+    "$HOME/.config/waybar/Modules.jsonc"
   ],
-
   "layer": "top", // Waybar at top layer
   // "position": "bottom", // Waybar position (top|bottom|left|right)
   "height": 35, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
-  "spacing": 6, // Gaps between modules (4px)
+  "spacing": 4, // Gaps between modules (4px)
   "fixed-center": true,
   "margin-top": 0,
   "margin-bottom": -2,
@@ -18,29 +16,27 @@
   // Choose the order of the modules
   "modules-left": [
     "custom/arch",
+    "power-profiles-daemon",
     "idle_inhibitor",
     "tray",
-	  "custom/pacman"
+    "custom/pacman"
   ],
   "modules-center": [
-    //"hyprland/window",
     "hyprland/workspaces"
   ],
   "modules-right": [
-        "mpd",
-        "pulseaudio",
-	      "bluetooth",
-        "network",
-        "power-profiles-daemon",
-        "cpu",
-        "memory",
-        "temperature",
-        "backlight",
-        "keyboard-state",
-        "sway/language",
-        "battery",
-        "battery#bat2",
-        "clock",
-        "custom/power"
-  ],
+    "mpd",
+    "pulseaudio",
+    "bluetooth",
+    "network",
+    "cpu",
+    "memory",
+    "temperature",
+    "backlight",
+    "keyboard-state",
+    "battery",
+    "battery#bat2",
+    "clock",
+    "custom/power"
+  ]
 }

@@ -125,21 +125,23 @@ button:hover {
 }
 
 #workspaces button {
-    color: @foreground;
+  background-color: @background;
+    color: @color15;
     padding: 0px;
     padding-left: 4px;
     padding-right: 4px;
 }
 
 #workspaces button:hover {
-    color: @color4;
+    color: @color3;
     border-radius: 0px;
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
-#workspaces button.focused {
-    color: @color4;
+#workspaces button.active {
+  background-color: @color3;
+    color: @color15;
     padding-left: 4px;
     padding-right: 4px;
 }
@@ -169,7 +171,12 @@ button:hover {
 #power-profiles-daemon,
 #mpd {
     padding: 0 10px;
-    color: #ffffff;
+    color: @color15;
+}
+#mpd.stopped {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
 }
 
 #window,
@@ -189,13 +196,24 @@ button:hover {
 
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: @background;
+    color: @color15;
 }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
+    color: @color15;
     background-color: #26A65B;
+}
+
+#battery.full {
+  color: @color3;
+  background-color: #26A65B;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
 }
 
 @keyframes blink {
@@ -208,7 +226,7 @@ button:hover {
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
     background-color: #f53c3c;
-    color: #ffffff;
+    color: @color15;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
