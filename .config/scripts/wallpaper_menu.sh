@@ -16,5 +16,6 @@ fi
 # Falls etwas ausgewählt wurde, Wallpaper setzten
 if [ -n "$SELECTED" ]; then
   hyprctl hyprpaper reload ,"$SELECTED"
+  echo -e "preload = $SELECTED\nwallpaper = ,$SELECTED" >~/.config/hypr/hyprpaper.conf
   wal -i "$SELECTED" --contrast 2
 fi
