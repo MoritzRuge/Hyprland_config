@@ -135,3 +135,10 @@ function y() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+. "$HOME/.cargo/env"
+
+# >>> coursier install directory >>>
+export PATH="$PATH:/home/legion/.local/share/coursier/bin"
+# <<< coursier install directory <<<
+
