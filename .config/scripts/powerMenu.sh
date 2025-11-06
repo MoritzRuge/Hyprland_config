@@ -1,10 +1,14 @@
 #!/bin/bash
 
-selection=$(echo "Sleep
-Log out
-Reboot
-Shutdown
-Shutdown Now" | wofi -dmenu)
+if pacman -Qs wlogout >/dev/null; then
+  wlogout
+else
+  selection=$(echo "Sleep
+  Log out
+  Reboot
+  Shutdown
+  Shutdown Now" | wofi -dmenu)
+fi
 
 if [[ $selection == "Shutdown" ]]; then
   hyprctl notify 3 30000 "rgb(ff0000)" "Shutdown scheduled"
