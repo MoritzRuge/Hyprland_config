@@ -138,6 +138,11 @@ function y() {
 
 . "$HOME/.cargo/env"
 
+# >>> JVM installed by coursier >>>
+export JAVA_HOME="/home/legion/.cache/coursier/arc/https/github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.28%252B6/OpenJDK11U-jdk_x64_linux_hotspot_11.0.28_6.tar.gz/jdk-11.0.28+6"
+export PATH="$PATH:/home/legion/.cache/coursier/arc/https/github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.28%252B6/OpenJDK11U-jdk_x64_linux_hotspot_11.0.28_6.tar.gz/jdk-11.0.28+6/bin"
+# <<< JVM installed by coursier <<<
+
 # >>> coursier install directory >>>
 export PATH="$PATH:/home/legion/.local/share/coursier/bin"
 # <<< coursier install directory <<<
