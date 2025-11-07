@@ -50,7 +50,7 @@
     "format-no-controller": "",
     "format-connected": "{device_alias} connected",
     "format-connected-battey": "{device_alias} {device_battery_percentage}%",
-    "on-click": "kitty 'bluetui'"
+    "on-click": "foot 'bluetui'"
   },
   "tray": {
     // "icon-size": 21,
@@ -69,7 +69,7 @@
     "format": "[ cpu: {usage}% ]",
     "interval": 3,
     "tooltip": false,
-    "on-click": "kitty btop"
+    "on-click": "foot btop"
   },
   "memory": {
     "format": "[ mem: {}% ]"
@@ -159,7 +159,7 @@
         ""
       ]
     },
-    "on-click": "kitty wiremix"
+    "on-click": "foot wiremix"
   },
   "custom/media": {
     "format": "{icon} {text}",
@@ -186,7 +186,7 @@
     "interval": 300,
     "return-type": "json",
     "exec": "~/.config/scripts/updates.sh",
-    "on-click": "kitty 'update-system.sh'",
+    "on-click": "foot update-system.sh",
     "tooltip": true,
     "class": "blink"
   },

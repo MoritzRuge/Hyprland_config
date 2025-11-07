@@ -2,7 +2,7 @@
 
 # --- Threshhold --- #
 threshhold_green=0
-threshhold_yellow=25
+threshhold_yellow=50
 threshhold_red=100
 
 # --- Check for updates --- #
