@@ -11,8 +11,8 @@
   "fixed-center": true,
   "margin-top": 0,
   "margin-bottom": -2,
-  "margin-left": 0,
-  "margin-right": 0,
+  "margin-left": 10,
+  "margin-right": 10,
   // Choose the order of the modules
   "modules-left": [
     "custom/arch",
