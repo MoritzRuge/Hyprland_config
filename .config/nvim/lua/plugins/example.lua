@@ -148,7 +148,14 @@ return {
       vim.list_extend(opts.ensure_installed, {
         "tsx",
         "typescript",
+        "bibtex",
+        "latex",
       })
+      if type(opts.highlight.disable) == "table" then
+        vim.list_extend(opts.highlight.disable, { "latex", "bibtex" })
+      else
+        opts.highlight.disable = { "latex", "bibtex" }
+      end
     end,
   },
 
