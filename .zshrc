@@ -71,7 +71,13 @@ ZSH_THEME="jonathan"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #zsh-autocomplete
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting  z)
+plugins=(
+  git 
+  zsh-autosuggestions 
+  zsh-syntax-highlighting  
+  z
+  poetry
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -148,3 +154,11 @@ export PATH="$PATH:/home/legion/.cache/coursier/arc/https/github.com/adoptium/te
 export PATH="$PATH:/home/legion/.local/share/coursier/bin"
 # <<< coursier install directory <<<
 
+
+eval $(thefuck --alias)
+
+# Created by `pipx` on 2025-11-17 09:20:32
+export PATH="$PATH:/home/legion/.local/bin"
+
+# Path for bacon rust ?
+export PATH="$PATH:/home/legion/.bin"
