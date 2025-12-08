@@ -2,14 +2,14 @@
   "keyboard-state": {
     "numlock": true,
     "capslock": true,
-    "format": "{name} {icon}",
+    "format": "[{name} {icon}]",
     "format-icons": {
       "locked": "",
       "unlocked": ""
     }
   },
   "idle_inhibitor": {
-    "format": "{icon}",
+    "format": "[{icon}]",
     "tooltip": "true",
     "tooltip-format-activated": "Idle_inhibitor active",
     "tooltip-format-deactivated": "Idle_inhibitor not active",
@@ -45,12 +45,13 @@
     "tooltip-format-disconnected": "MPD (disconnected)"
   },
   "bluetooth": {
-    "format": "{status}",
+    "format": "[{status}]",
     "format-disabled": "", //if disab. empty
+    "format-stopped": "[on]",
     "format-no-controller": "",
     "format-connected": "[connected]",
-    "format-connected-battey": "{device_alias} {device_battery_percentage}%",
-    "tooltip-format": "{device_alias} - {device_battery_percentage}%",
+    "format-connected-battey": "[{device_alias} {device_battery_percentage}%]",
+    "tooltip-format": "[{device_alias} - {device_battery_percentage}%]",
     "on-click": "foot 'bluetui'"
   },
   "tray": {
@@ -63,17 +64,17 @@
   },
   "clock": {
     // "timezone": "America/New_York",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
+    "tooltip-format": "[<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>]",
+    "format-alt": "[{:%Y-%m-%d}]"
   },
   "cpu": {
-    "format": "[ cpu: {usage}% ]",
+    "format": "[cpu: {usage}%]",
     "interval": 3,
     "tooltip": false,
     "on-click": "foot btop"
   },
   "memory": {
-    "format": "[ mem: {}% ]"
+    "format": "[mem: {}%]"
   },
   "temperature": {
     //"thermal-zone": 2,
@@ -81,11 +82,11 @@
     "warning-threshold": 50,
     "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C {icon}",
-    "format": "[ temp: {temperatureC}°C ]"
+    "format": "[temp: {temperatureC}°C]"
   },
   "backlight": {
     // "device": "acpi_video1",
-    "format": "{percent}% {icon}",
+    "format": "[{percent}% {icon}]",
     "format-icons": [
       "",
       "",
@@ -104,11 +105,11 @@
       "warning": 35,
       "critical": 15
     },
-    "format": "{capacity}% {icon}",
-    "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
-    "format-alt": "{time} {icon}",
+    "format": "[{capacity}% {icon}]",
+    "format-full": "[{capacity}% {icon}]",
+    "format-charging": "[{capacity}% ]",
+    "format-plugged": "[{capacity}% ]",
+    "format-alt": "[{time} {icon}]",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
     "format-icons": [
@@ -136,20 +137,21 @@
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
     "format-wifi": "[{signalStrength}% ]",
-    "format-ethernet": "[   {bandwidthDownBytes} |   {bandwidthUpBytes} 󰛳  ]",
-    "tooltip-format": "{essid}: {ifname} via {gwaddr} 󰛳",
-    "format-linked": "{ifname} (No IP) 󰛳",
-    "format-disconnected": "Disconnected ⚠",
+    "format-ethernet": "[ {bandwidthDownBytes} | {bandwidthUpBytes}]",
+    "tooltip-format": "{essid}: {ifname} via {gwaddr}",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "[Disconnected]",
     "interval": 1,
     "on-click": "~/.config/scripts/waybar_network_interface.sh",
-    "tooltip-format-ethernet": "{ipaddr}/{cidr}"
+    "tooltip-format-ethernet": "{ipaddr}/{cidr}",
+    "max-length": 50
   },
   "pulseaudio": {
     "scroll-step": 5, // %, can be a float
-    "format": "{volume}% {icon} {format_source}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
+    "format": "[{volume}% {icon} {format_source}]",
+    "format-bluetooth": "[{volume}% {icon} {format_source}]",
+    "format-bluetooth-muted": "[ {icon} {format_source}]",
+    "format-muted": "[ {format_source}]",
     "format-source": "{volume}% ",
     "format-source-muted": "",
     "format-icons": {
@@ -163,7 +165,7 @@
     "on-click": "foot wiremix"
   },
   "custom/media": {
-    "format": "{icon} {text}",
+    "format": "[{icon} {text}]",
     "return-type": "json",
     "max-length": 40,
     "format-icons": {
@@ -175,7 +177,7 @@
     // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
   },
   "custom/power": {
-    "format": "⏻ ",
+    "format": "[⏻] ",
     "tooltip": false,
     "menu": "on-click",
     "menu-file": "$HOME/.config/scripts/powerMenu.sh",
@@ -206,13 +208,13 @@
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "1": "[{name}]",
-      "2": "[{name}]",
-      "3": "[{name}]",
-      "4": "[{name}]",
-      "5": "[{name}]",
-      "active": "[[{name}]]",
-      "default": "[{name}]"
+      "1": "[1]",
+      "2": "[2]",
+      "3": "[3]",
+      "4": "[4]",
+      "5": "[5]",
+      //"active": "[[_]]",
+      "default": "[]"
     },
     "persistent-workspaces": {
       "*": 5
