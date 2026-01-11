@@ -76,7 +76,6 @@ plugins=(
   zsh-autosuggestions 
   zsh-syntax-highlighting  
   z
-  poetry
 )
 
 source $ZSH/oh-my-zsh.sh
