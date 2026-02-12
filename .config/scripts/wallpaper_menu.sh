@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Ordner für die Wallpaper
-WALLPAPER_DIR="$HOME/wallpapers"
+WALLPAPER_DIR="$HOME/.config/wallpapers"
 
 # Liste der Wallpapers
 WALLPAPERS=$(ls "$WALLPAPER_DIR")
@@ -15,7 +15,7 @@ fi
 
 # Falls etwas ausgewählt wurde, Wallpaper setzten
 if [ -n "$SELECTED" ]; then
-  hyprctl hyprpaper reload ,"$SELECTED"
-  echo -e "preload = $SELECTED\nwallpaper = ,$SELECTED" >~/.config/hypr/hyprpaper.conf
+  swaybg -i "$SELECTED"
+  #echo -e "preload = $SELECTED\nwallpaper = ,$SELECTED" >~/.config/hypr/hyprpaper.conf
   wal -i "$SELECTED" --contrast 2
 fi

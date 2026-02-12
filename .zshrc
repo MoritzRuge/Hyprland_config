@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="jonathan"
+ZSH_THEME="kardan"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -88,11 +88,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='nvim'
+else
+  export EDITOR='vim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -131,7 +131,7 @@ unsetopt prompt_sp # don't autoclean blanklines
 export PATH="$HOME/.config/scripts:$PATH"
 
 # --- Autostart --- #
-#fastfetch
+fastfetch
 
 # --- yazi shell wrapper --- #
 function y() {
@@ -145,8 +145,8 @@ function y() {
 . "$HOME/.cargo/env"
 
 # >>> JVM installed by coursier >>>
-export JAVA_HOME="/home/legion/.cache/coursier/arc/https/github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.28%252B6/OpenJDK11U-jdk_x64_linux_hotspot_11.0.28_6.tar.gz/jdk-11.0.28+6"
-export PATH="$PATH:/home/legion/.cache/coursier/arc/https/github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.28%252B6/OpenJDK11U-jdk_x64_linux_hotspot_11.0.28_6.tar.gz/jdk-11.0.28+6/bin"
+export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
+export PATH="$PATH:/usr/lib/jvm/java-17-openjdk"
 # <<< JVM installed by coursier <<<
 
 # >>> coursier install directory >>>
