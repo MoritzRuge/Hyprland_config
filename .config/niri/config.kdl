@@ -388,10 +388,10 @@ binds {
     Mod+RETURN hotkey-overlay-title="Open a Terminal: foot" { spawn "foot"; }
     Mod+R hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+X hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
-    Super+Shift+X hotkey-overlay-title="PowerMenu" { spawn-sh "powerMenu.sh"; }
     Mod+B hotkey-overlay-title="Open Browser: Firefox" { spawn "firefox"; }
     Mod+E hotkey-overlay-title="Open File explorer: dolphin" { spawn "dolphin"; }
     Mod+F1 hotkey-overlay-title="Choose your wallpaper" { spawn ".config/scripts/wallpaper_menu.sh"; }
+    Mod+Shift+x hotkey-overlay-title="Logout menu" { spawn ".config/scripts/powerMenu.sh"; }
 
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
