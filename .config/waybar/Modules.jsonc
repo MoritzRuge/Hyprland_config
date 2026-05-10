@@ -164,6 +164,13 @@
     },
     "on-click": "foot wiremix"
   },
+
+  "disk": {
+    "format": "[disk: {}%]",
+    "interval": 60,
+    "on-click": "foot dua interactive ~"
+  },
+
   "custom/media": {
     "format": "[{icon} {text}]",
     "return-type": "json",
@@ -188,8 +195,8 @@
     "tooltip_format": "{}",
     "interval": 300,
     "return-type": "json",
-    "exec": "~/.config/scripts/updates.sh",
     "on-click": "foot update-system.sh",
+    "exec": "~/.config/scripts/updates.sh",
     "tooltip": true,
     "class": "blink"
   },
@@ -205,19 +212,10 @@
                       ██║  ██║██║  ██║╚██████╗██║  ██║    ██████╔╝   ██║   ╚███╔███╔╝
                       ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝    ╚═════╝    ╚═╝    ╚══╝╚══╝ "
   },
-  "hyprland/workspaces": {
-    "format": "{icon}",
-    "format-icons": {
-      "1": "[1]",
-      "2": "[2]",
-      "3": "[3]",
-      "4": "[4]",
-      "5": "[5]",
-      //"active": "[[_]]",
-      "default": "[]"
-    },
-    "persistent-workspaces": {
-      "*": 5
-    }
+
+  "custom/osAge": {
+    "format": "{create-time:10} ({days} days)",
+    "folders": "/",
+    "type": "disk"
   }
 }

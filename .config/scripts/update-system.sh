@@ -3,7 +3,8 @@
 # Script to update the system
 
 checkupdates
-yay -Qu
+sleep 1
+paru -Syua
 sleep 1
 
 while true; do
@@ -14,8 +15,11 @@ while true; do
     sleep 0.5
     sudo pacman -Syu --noconfirm
     sleep 0.5
+    pkgstats submit
 
-    yay -Sua
+    paru -Syua
+    sleep 1
+    flatpak upgrade -y
     echo "Completed the system upgrade!"
     sleep 1
     exit 0

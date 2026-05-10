@@ -17,9 +17,11 @@
   // Choose the order of the modules
   "modules-left": [
     "custom/arch",
+    "custom/osAge",
     "power-profiles-daemon",
     "idle_inhibitor",
     "tray",
+    "kde-connect",
     "custom/pacman"
   ],
   "modules-center": [
@@ -32,6 +34,7 @@
     "network",
     "cpu",
     "memory",
+    "disk",
     "temperature",
     "backlight",
     "keyboard-state",
